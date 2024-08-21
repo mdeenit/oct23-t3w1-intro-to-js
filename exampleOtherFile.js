@@ -1,48 +1,34 @@
-// import syntax works for React, needs different tweaks for vanilla JS
-// import {logTheTeam as originalLogger}  from "./script";
+let someMessage = "Bananas"; 
 
-
-
-logTheTeam();
-// originalLogger();
-
-
-console.log(person.name);
-
-// import data from "./jsonExample.json";
-
-// let data = fetch("./jsonExample.json").then(data => {return data});
-
-// console.log(data);
-
-let exampleJson = {
-	"name":"Alex",
-	"favouriteFood":[
-		"pizza",
-		"pies",
-		"mangoes"
-	]
+if (someMessage) {
+	console.group("Conditioning log"); 
 }
 
 
-/*
+if (someMessage == 'oranges') { 
+	console.log("We have oranges!"); 
+}
 
-1. JSON.parse to convert a JSON string into an object
-2. Modify the object however you want
-3. Save the JSON as a JSON string by stringifying it
+let someNumberMessage = "10";
 
-*/
+if (someNumberMessage == 10) {
+	console.log("We have 10 of the things!"); 
+}
 
-let jsonString = JSON.stringify(exampleJson);
+if (someNumberMessage >= 5){
+	console.log("Number is greater than 5"); 
+}
 
-console.log(JSON.stringify(exampleJson));
+let someCoolMessage = someMessage == "oranges" ? someMessage.substring(0, 2).toLocaleUpperCase() : "Default message here"; 
+// 									"Bananas!" . "Ba"			."BA"
 
-// Load your JSON 
-let processedJson = JSON.parse(jsonString);
+console.log(someCoolMessage);
+ 
+// toLocaleUpperCase is a method that is attached to the string 
+// a substring returns a portion of the string based on the given position 
 
-console.log(processedJson);
-processedJson.name = "Batman";
-
-console.log(JSON.stringify(processedJson));
-
-
+if (someMessage == "oranges") { 
+	let someCoolMessage = someMessage.substring(0, 2).toLocaleUpperCase()
+} else {
+	let someCoolMessage = "Default message here";
+}
