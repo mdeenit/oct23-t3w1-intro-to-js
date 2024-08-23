@@ -4,7 +4,7 @@ console.log("Dice roller file loaded");
 // Function that rolls a dice and the dice size is a parameter
 // generic dice roller function 
 function rollDice(diceSize = 6){
-    console.log("Dice rolling function has been called with a dice size of" + diceSize); 
+    console.log("Dice rolling function has been called with a dice size of " + diceSize); 
 }
 
 rollDice(); //diceSize is 6 
