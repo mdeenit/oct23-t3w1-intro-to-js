@@ -48,8 +48,13 @@ let superAwesomeDiceResult = rollD20();
 
 console.log("Super awesome dice result is: " + superAwesomeDiceResult)
 
+// Declare without assignment 
+var diceResults; 
+
+// let, var, const 
+
 function rollD20WithAdvantage(){
-    let diceResults = [
+    diceResults = [
         rollD20(), 
         rollD20()
     ];
@@ -68,3 +73,6 @@ function rollD20WithAdvantage(){
 }
 
 console.log("Rolling 2 D20 with advantage: " + rollD20WithAdvantage()); 
+
+console.log("First roll in advantage rolls is: " + diceResults[0]);
+
